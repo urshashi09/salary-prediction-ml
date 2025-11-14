@@ -5,7 +5,7 @@ It includes data preprocessing, exploratory data analysis (EDA), model training,
 
 ## Project Overview
 The goal of this project is to analyze salary-related data and develop predictive models, with a focus on Linear Regression.
-Additionally, we compare performance with Decision Tree, Random Forest, and a Voting Regressor to identify the best model.
+Additionally, we compare performance with Decision Tree, Random Forest, and a Voting Regressor.
 
 
 ## Dataset
@@ -69,10 +69,10 @@ After comparing all models, the Random Forest Regressor achieved the best perfor
 - Highest R² Score 
 - Lowest MAE
 
-Therefore, it was selected as the final model and saved using joblib as
+ Finally, we save the Linear Regression model for future predictions using joblib as
 
 ```python
-salary_prediction_rf.pkl
+salary_prediction.pkl
 ```
 
 ## Salary Prediction Function
@@ -84,7 +84,7 @@ A prediction function accepts user input:
 - Job Title
 - Years of Experience
 
-After preprocessing the inputs, the function predicts the salary using the saved Random Forest model.
+After preprocessing the inputs, the function predicts the salary using the saved Linear Regression model.
 
 
 ## Requirements
@@ -102,6 +102,6 @@ pip install -r requirements.txt
 
 ## Conclusion
 
-This project successfully analyzes salary factors using machine learning.
-Among four models, the Random Forest Regressor delivered the most accurate predictions.
+This project successfully analyzes salary factors using Linear Regression.
+Among four models, the Random Forest Regressor delivered the most accuracy.
 It is efficient, robust, and suitable for real-world salary forecasting.
