@@ -3,9 +3,24 @@
 This project builds a machine learning system to predict employee salaries based on features such as Age, Gender, Education Level, Job Title, and Years of Experience.
 It includes data preprocessing, exploratory data analysis (EDA), model training, model comparison, and an interactive salary prediction script.
 
+## Linear Regression Theory
+Linear Regression (LR) is a core statistical method that models the relationship between a continuous output variable (Salary) and one or more input variables as a straight line or hyperplane.
+
+This model aims to find the best fit by minimizing the squared errors between the predicted line and the actual data points.
+
+The mathematical form is:
+$y = b_0 + b_1 x + ϵ
+## Multiple Linear Regression (MLR) Application
+This project uses Multiple Linear Regression (MLR) because the dataset has five predictor variables: Age, Gender, Education Level, Job Title, and Years of Experience.
+
+The MLR equation for this project is: Salary = b0 + b1(Age) + b2(Gender) + b3(Education) + b4(JobTitle) + b(Experience) + ϵ
+- The model calculates an optimal coefficient bi for each feature.
+- This coefficient quantifies the expected change in Salary for a one-unit change in that specific feature, assuming all other factors remain constant.
+- MLR provides an interpretable baseline for understanding how each variable linearly contributes to the predicted salary.
+
 ## Project Overview
 The goal of this project is to analyze salary-related data and develop predictive models, with a focus on Linear Regression.
-Additionally, we compare performance with Decision Tree, Random Forest, and a Voting Regressor to identify the best model.
+Additionally, we compare performance with Decision Tree, Random Forest, and a Voting Regressor.
 
 
 ## Dataset
@@ -69,10 +84,10 @@ After comparing all models, the Random Forest Regressor achieved the best perfor
 - Highest R² Score 
 - Lowest MAE
 
-Therefore, it was selected as the final model and saved using joblib as
+ Finally, we save the Linear Regression model for future predictions using joblib as
 
 ```python
-salary_prediction_rf.pkl
+salary_prediction.pkl
 ```
 
 ## Salary Prediction Function
@@ -84,7 +99,7 @@ A prediction function accepts user input:
 - Job Title
 - Years of Experience
 
-After preprocessing the inputs, the function predicts the salary using the saved Random Forest model.
+After preprocessing the inputs, the function predicts the salary using the saved Linear Regression model.
 
 
 ## Requirements
@@ -102,6 +117,6 @@ pip install -r requirements.txt
 
 ## Conclusion
 
-This project successfully analyzes salary factors using machine learning.
-Among four models, the Random Forest Regressor delivered the most accurate predictions.
+This project successfully analyzes salary factors using Linear Regression.
+Among four models, the Random Forest Regressor delivered the most accuracy.
 It is efficient, robust, and suitable for real-world salary forecasting.
