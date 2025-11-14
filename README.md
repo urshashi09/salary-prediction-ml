@@ -3,6 +3,21 @@
 This project builds a machine learning system to predict employee salaries based on features such as Age, Gender, Education Level, Job Title, and Years of Experience.
 It includes data preprocessing, exploratory data analysis (EDA), model training, model comparison, and an interactive salary prediction script.
 
+## Linear Regression Theory
+Linear Regression (LR) is a core statistical method that models the relationship between a continuous output variable (Salary) and one or more input variables as a straight line or hyperplane.
+
+This model aims to find the best fit by minimizing the squared errors between the predicted line and the actual data points.
+
+The mathematical form is:
+$y = b_0 + b_1 x + ϵ
+## Multiple Linear Regression (MLR) Application
+This project uses Multiple Linear Regression (MLR) because the dataset has five predictor variables: Age, Gender, Education Level, Job Title, and Years of Experience.
+
+The MLR equation for this project is: Salary = b0 + b1(Age) + b2(Gender) + b3(Education) + b4(JobTitle) + b(Experience) + ϵ
+- The model calculates an optimal coefficient bi for each feature.
+- This coefficient quantifies the expected change in Salary for a one-unit change in that specific feature, assuming all other factors remain constant.
+- MLR provides an interpretable baseline for understanding how each variable linearly contributes to the predicted salary.
+
 ## Project Overview
 The goal of this project is to analyze salary-related data and develop predictive models, with a focus on Linear Regression.
 Additionally, we compare performance with Decision Tree, Random Forest, and a Voting Regressor.
